@@ -3,20 +3,15 @@
 		"taxiDriver": {
 			"recipe": {
 				"batch": {
-					
-
-				}
+					"saintJames": 1.5,
+					"bananeDuBresil": 0.5,
+				},
+				"lime": 1,
+				"ube": 0.5,
+				"CocoLopez": 0.5
 			},
 			"garnish": "Banana chip",
 			"glass": "coupe",
-			// 			(2oz Batch)*
-// 1.5oz saint james
-// .5oz Banane du Bresil
-// 1oz Lime
-// .5oz Ube
-// .5oz Coco Lopez 
-// Glass:Coupe
-// Garnish: Banana chip and ube powder
 		},
 		"lafayettePlace": {
 			"recipe": {
