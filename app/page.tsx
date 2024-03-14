@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { Wine } from "./components/svg/wine-glass";
+import { Collins } from "./components/svg/collins";
+import { Rocks } from "./components/svg/rocks";
+import { NickAndNora } from "./components/svg/nick-and-nora";
+import { Coupe } from "./components/svg/coupe";
 
 export default function Home() {
   return (
@@ -21,27 +26,35 @@ function Drink() {
   return (
     <div
       onClick={handleFlip}
-      className={` text-cyan-800 bg-red-200 w-24  rounded h-96 min-w-80 relative card ${
+      className={` text-dark-grey-blue bg-light-tan rounded-lg max-w-[300px] min-h-96 relative card ${
         activeCard ? "cardFlip" : ""
       }`}
     >
-      <div className="front">
-        <div>
-          <Image
+      <div className="front flex flex-col justify-around">
+        <img
+          src="/cocktails/Layfayette.jpeg"
+          alt="Image of cocktail"
+          className="rounded-t-lg"
+        />
+        {/* <Image
             src={"/cocktails/Layfayette.jpeg"}
             alt="Image of cocktail"
-            className=""
+            className="rounded"
             width={384}
             height={250}
-          />
-        </div>
-        <h1 className="font-bold text-2xl centered mb-4">Lafayette Place</h1>
+            // fill={true}
+          /> */}
+
+        <h1 className="font-bold text-2xl centered mt-6">Lafayette Place</h1>
       </div>
 
-      <div className="back absolute p-6 top-0 w-full h-full ">
-        <h1 className="font-bold text-2xl centered mb-4">Lafayette Place</h1>
+      <div className="back absolute p-8 top-0">
+        <div className="flex justify-between">
+          <h1 className="font-bold text-2xl centered mb-6">Lafayette Place</h1>
+          <Wine />
+        </div>
 
-        <div className="mb-2">
+        <div className="mb-4">
           <h3>
             <span className="font-bold mr-1">1.75oz</span> Batch
           </h3>
@@ -58,8 +71,12 @@ function Drink() {
           </p>
         </div>
 
-        <p>Garnish: Firestick</p>
-        <p>Glass: Nick & Nora</p>
+        <div className="flex justify-between">
+          <div>
+            <p className="mb-2">Garnish: Firestick</p>
+          </div>
+          <div className="flex"></div>
+        </div>
       </div>
     </div>
   );
