@@ -1,69 +1,55 @@
-{
-	"cocktails" : {
-		"taxiDriver": {
-			"recipe": {
-				"batch": {
-					"saintJames": 1.5,
-					"bananeDuBresil": 0.5,
-				},
-				"lime": 1,
-				"ube": 0.5,
-				"CocoLopez": 0.5
-			},
-			"garnish": "Banana chip",
-			"glass": "coupe",
-		},
-		"lafayettePlace": {
-			"recipe": {
-				"batch": {
-
-				}
-			},
-			"garnish": "Banana chip",
-			"glass": "coupe"
-			//  (1.75oz Batch)*
-// .75oz Citadelle gin
-// .75oz St Germain
-// .25oz Maraschino 
-// .75oz Lime
-// .5oz Tart Cherry
-// Glass: Nick & Nora
-// Garnish: Firestick
-		},
-		"taxiDriver": {
-			"recipe": {
-				"batch": {
-
-				}
-			},
-			"garnish": "Banana chip",
-			"glass": "coupe",
-		},
-		"taxiDriver": {
-			"recipe": {
-				"batch": {
-
-				}
-			},
-			"garnish": "Banana chip",
-			"glass": "coupe",
-		},
-		"taxiDriver": {
-			"recipe": {
-				"batch": {
-
-				}
-			},
-			"garnish": "Banana chip",
-			"glass": "coupe",
-		},
-	}
-}
-
-
-		
-
-
+[
+  {
+    "lafayettePlace": {
+      "recipe": {
+        "batch": {
+          "Citadelle gin": 0.75,
+          "St Germain": 0.75,
+          "Maraschino": 0.25
+        },
+        "Lime": 0.75,
+        "Tart Cherry": 0.5
+      },
+      "garnish": "Firestick",
+      "glass": "nick and nora",
+      "img": "/cocktails/Layfayette.jpeg"
+    }
+  }
+]
+// "taxiDriver": {
+//   "recipe": {
+//     "batch": {
+//       "saintJames": 1.5,
+//       "bananeDuBresil": 0.5
+//     },
+//     "lime": 1,
+//     "ube": 0.5,
+//     "CocoLopez": 0.5
+//   },
+//   "garnish": "Banana chip",
+//   "glass": "coupe"
+// },
+// "taxiDriver": {
+//   "recipe": {
+//     "batch": {}
+//   },
+//   "garnish": "Banana chip",
+//   "glass": "coupe"
+// },
+// "taxiDriver": {
+//   "recipe": {
+//     "batch": {}
+//   },
+//   "garnish": "Banana chip",
+//   "glass": "coupe"
+// },
+// "taxiDriver": {
+//   "recipe": {
+//     "batch": {}
+//   },
+//   "garnish": "Banana chip",
+//   "glass": "coupe"
+// }
 
 // The Tide is High(3oz Batch)*
 // 1.75oz St george terroir gin
@@ -74,11 +60,11 @@
 // Garnish: lemon peel, pine sprig, and 3 drops of pine oil
 
 // Who’s That Girl? (2.25oz Batch)- LES ONLY
-// 1.75oz Vodka 
+// 1.75oz Vodka
 // .5oz Spiced Pear
-// .5oz Saffron 
+// .5oz Saffron
 // Heavy .25oz Lemon
-// Rose Water Foam 
+// Rose Water Foam
 // Glass: Coupe
 // Garnish: saffron
 
@@ -98,15 +84,14 @@
 // .5oz Rocky
 // .25oz Braulio
 // .75oz Lemon
-// .5oz Simple 
+// .5oz Simple
 // .5oz Egg White
 // Heavy dollop of peach chutney ( fig spread)
 
-// Wine float 
+// Wine float
 // Glass: Collins
 // Garnish: Dehydrated lemon
 // Ice: Collins cube
-
 
 // Snap Out Of It!*
 // 2oz Rye
@@ -116,7 +101,6 @@
 // Glass: Rocks
 // Garnish: Chocolate graham cracker dust (half of glass), toasted marshmallow and chocolate teddy graham (opposite side of glass then dust)
 // iCE: cold draft
-
 
 // Sweet Jane  (3.5oz Batch) -LES ONLY
 // 2oz Mezcal
@@ -133,16 +117,14 @@
 // Garnish: Cracked pepper
 // Ice: None
 
-
-
 // I Got It Made (2.25oz Batch)
 // 2oz Scotch
 // .25oz Allspice Dram
 // 1oz Apple Ginger Syrup
 // 1oz Yogi Tea
-// Lime peel (add to tin before shaking) 
+// Lime peel (add to tin before shaking)
 // 2 dash ango bitters
-// Rolling shake 
+// Rolling shake
 // Glass: Rocks
 // Garnish:TBD
 // Ice: Cold draft
@@ -151,8 +133,8 @@
 // 1oz Milagro
 // .5oz Earl Grey Persian Lime
 // .5oz Lemon
-// .25oz Grapefruit 
-// 3oz Prosecco 
+// .25oz Grapefruit
+// 3oz Prosecco
 // Glass: Wine glass
 // Ice: Flower ice cubes
 // Build in Glass

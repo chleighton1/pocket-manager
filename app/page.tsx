@@ -1,14 +1,33 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Wine } from "./components/svg/wine-glass";
 import { Collins } from "./components/svg/collins";
 import { Rocks } from "./components/svg/rocks";
 import { NickAndNora } from "./components/svg/nick-and-nora";
 import { Coupe } from "./components/svg/coupe";
+import data from "@/app/data/data.json";
 
 export default function Home() {
+  // const [cocktails, setCocktails] = useState(null);
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       const response = await fetch("./data/data.json");
+  //       const data = await response.json();
+  //       setCocktails(data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   }
+
+  //   fetchData();
+  // }, []);
+
+  console.log(data.cocktails);
+
   return (
     <div className="p-10">
       <Drink />
@@ -18,6 +37,13 @@ export default function Home() {
 
 function Drink() {
   const [activeCard, setActiveCard] = useState(false);
+  const glass = {
+    wine: <Wine />,
+    collins: <Collins />,
+    rocks: <Rocks />,
+    "nick and nora": <NickAndNora />,
+    coupe: <Coupe />,
+  };
 
   const handleFlip = () => {
     setActiveCard(!activeCard);
@@ -26,7 +52,7 @@ function Drink() {
   return (
     <div
       onClick={handleFlip}
-      className={` text-dark-grey-blue bg-light-tan rounded-lg max-w-[300px] min-h-96 relative card ${
+      className={` text-dark-grey-blue bg-light-tan rounded-lg max-w-[300px] min-h-96 relative card shadow-xl ${
         activeCard ? "cardFlip" : ""
       }`}
     >
@@ -36,22 +62,13 @@ function Drink() {
           alt="Image of cocktail"
           className="rounded-t-lg"
         />
-        {/* <Image
-            src={"/cocktails/Layfayette.jpeg"}
-            alt="Image of cocktail"
-            className="rounded"
-            width={384}
-            height={250}
-            // fill={true}
-          /> */}
-
         <h1 className="font-bold text-2xl centered mt-6">Lafayette Place</h1>
       </div>
 
       <div className="back absolute p-8 top-0">
         <div className="flex justify-between">
           <h1 className="font-bold text-2xl centered mb-6">Lafayette Place</h1>
-          <Wine />
+          {glass["nick and nora"]}
         </div>
 
         <div className="mb-4">
