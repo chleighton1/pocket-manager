@@ -1,102 +1,44 @@
-"use client";
-
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { Wine } from "./components/svg/wine-glass";
-import { Collins } from "./components/svg/collins";
-import { Rocks } from "./components/svg/rocks";
-import { NickAndNora } from "./components/svg/nick-and-nora";
-import { Coupe } from "./components/svg/coupe";
 import data from "@/app/data/data.json";
+import Drink from "./components/Drink";
+import { promises as fs } from "fs";
 
-export default function Home() {
-  // const [cocktails, setCocktails] = useState(null);
+export default async function Page() {
+  const file = await fs.readFile(process.cwd() + "/app/data/data.json", "utf8");
+  const data = JSON.parse(file);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const response = await fetch("./data/data.json");
-  //       const data = await response.json();
-  //       setCocktails(data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, []);
-
-  console.log(data.cocktails);
-
-  return (
-    <div className="p-10">
-      <Drink />
-    </div>
-  );
-}
-
-function Drink() {
-  const [activeCard, setActiveCard] = useState(false);
-  const glass = {
-    wine: <Wine />,
-    collins: <Collins />,
-    rocks: <Rocks />,
-    "nick and nora": <NickAndNora />,
-    coupe: <Coupe />,
+  type Batch = {
+    [ingredient: string]: number;
   };
 
-  const handleFlip = () => {
-    setActiveCard(!activeCard);
+  type Other = {
+    [ingredient: string]: number;
   };
 
-  return (
-    <div
-      onClick={handleFlip}
-      className={` text-dark-grey-blue bg-light-tan rounded-lg max-w-[300px] min-h-96 relative card shadow-xl ${
-        activeCard ? "cardFlip" : ""
-      }`}
-    >
-      <div className="front flex flex-col justify-around">
-        <img
-          src="/cocktails/Layfayette.jpeg"
-          alt="Image of cocktail"
-          className="rounded-t-lg"
-        />
-        <h1 className="font-bold text-2xl centered mt-6">Lafayette Place</h1>
-      </div>
+  type Cocktail = {
+    name: string;
+    recipe: {
+      batch: Batch;
+      other: Other;
+    };
+    garnish: string;
+    glass: string;
+    img: string;
+  };
 
-      <div className="back absolute p-8 top-0">
-        <div className="flex justify-between">
-          <h1 className="font-bold text-2xl centered mb-6">Lafayette Place</h1>
-          {glass["nick and nora"]}
-        </div>
+  console.log(data);
+  const drinks = data.map((drink: Cocktail) => {
+    return (
+      <Drink
+        name={drink.name}
+        recipe={drink.recipe}
+        garnish={drink.garnish}
+        glass={drink.glass}
+        imagePath={drink.img}
+      />
+    );
+  });
 
-        <div className="mb-4">
-          <h3>
-            <span className="font-bold mr-1">1.75oz</span> Batch
-          </h3>
-          <ul className="ml-6">
-            <li>.75oz Citadelle gin</li>
-            <li>.75oz St Germain</li>
-            <li>.25oz Maraschino</li>
-          </ul>
-          <p>
-            <span className="font-bold mr-1">.75oz</span> Lime
-          </p>
-          <p>
-            <span className="font-bold mr-1">.75oz</span> Tart Cherry
-          </p>
-        </div>
-
-        <div className="flex justify-between">
-          <div>
-            <p className="mb-2">Garnish: Firestick</p>
-          </div>
-          <div className="flex"></div>
-        </div>
-      </div>
-    </div>
-  );
+  return <div className="p-10">{drinks}</div>;
 }
 
 // 			//  (1.75oz Batch)*
