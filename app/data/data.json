@@ -15,5 +15,87 @@
     "garnish": "Firestick",
     "glass": "nick and nora",
     "img": "/cocktails/Layfayette.jpeg"
+  },
+  {
+    "name": "Taxi Driver",
+    "recipe": {
+      "batch": {
+        "Saint James": 1.5,
+        "Banane du Bresil": 0.5
+      },
+      "other": {
+        "Lime": 1,
+        "Ube": 0.5,
+        "Coco Lopez": 0.5
+      }
+    },
+    "garnish": "Banana chip",
+    "glass": "coupe",
+    "img": "/cocktails/Taxi Driver.jpeg"
+  },
+  {
+    "name": "The Tide is High",
+    "recipe": {
+      "batch": {
+        "St George Terroir": 1.75,
+        "Batavia Arak": 0.75,
+        "Genepy": 0.5
+      }
+    },
+    "garnish": "Pine Oil",
+    "glass": "nick and nora",
+    "img": "/cocktails/Tide Is High.jpeg"
+  },
+  {
+    "name": "Snap Out Of It",
+    "recipe": {
+      "batch": {
+        "Redemtion Rye": 2,
+        "Xila": 0.25
+      },
+      "other": {
+        "Graham Cracker Syrup": 0.25
+      },
+      "bitters": {
+        "Cocoa Bitters": 8
+      }
+    },
+    "garnish": "Toasted Marshmellow & Graham Cracker",
+    "glass": "rocks",
+    "img": "/cocktails/Snap Out Of It.jpeg"
+  },
+  {
+    "name": "Girls Just Wanna Have Fun",
+    "recipe": {
+      "other": {
+        "Milagro": 1,
+        "Earl Grey Persian Lime": 0.5,
+        "Lemon": 0.5,
+        "Grapefruit": 0.25,
+        "Prosecco": 3
+      }
+    },
+    "garnish": "Flower Ice Cube",
+    "glass": "wine",
+    "img": "/cocktails/Girls Just Wanna Have Fun.jpeg"
+  },
+  {
+    "name": "Dawn In New York",
+    "recipe": {
+      "batch": {
+        "Redemtion Rye": 1.5,
+        "Rocky": 0.5,
+        "Braulio": 0.25
+      },
+      "other": {
+        "Lemon": 0.75,
+        "Simple": 0.5,
+        "Egg White": 0.5,
+        "Peach Chutney": 0.75
+      }
+    },
+    "garnish": "Dehydrated Lemon + Wine Float",
+    "glass": "collins",
+    "img": "/cocktails/Dawn in NY.jpeg"
   }
 ]

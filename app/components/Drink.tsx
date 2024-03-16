@@ -20,6 +20,7 @@ type DrinkProps = {
   recipe: {
     batch: Batch;
     other: Other;
+    bitters: Other;
   };
   garnish: string;
   glass: string;
@@ -49,19 +50,30 @@ export default function Drink({
   let totalBatch = 0;
   let batchIngreds = [];
   let otherIngreds = [];
+  let bitters = [];
 
-  for (const quantity of Object.values(recipe.batch)) {
-    if (typeof quantity === "number") {
-      totalBatch += quantity;
+  if (recipe?.batch) {
+    for (const quantity of Object.values(recipe.batch)) {
+      if (typeof quantity === "number") {
+        totalBatch += quantity;
+      }
+    }
+
+    for (const key of Object.keys(recipe.batch)) {
+      batchIngreds.push(<li>{recipe.batch[key] + "oz " + key}</li>);
     }
   }
 
-  for (const key of Object.keys(recipe.batch)) {
-    batchIngreds.push(<li>{recipe.batch[key] + "oz " + key}</li>);
+  if (recipe?.other) {
+    for (const key of Object.keys(recipe.other)) {
+      otherIngreds.push(<span>{recipe.other[key] + "oz " + key}</span>);
+    }
   }
 
-  for (const key of Object.keys(recipe.other)) {
-    otherIngreds.push(<span>{recipe.other[key] + "oz " + key}</span>);
+  if (recipe?.bitters) {
+    for (const key of Object.keys(recipe.bitters)) {
+      otherIngreds.push(<span>{recipe.bitters[key] + " dashes " + key}</span>);
+    }
   }
 
   return (
@@ -83,11 +95,15 @@ export default function Drink({
         </div>
 
         <div className="mb-4">
-          <h3>
-            <span className="font-bold mr-1">{totalBatch + "oz"}</span> Batch
-          </h3>
+          {totalBatch > 0 && (
+            <h3>
+              <span className="font-bold mr-1">{totalBatch + "oz"}</span> Batch
+            </h3>
+          )}
+
           <ul className="ml-6">{batchIngreds}</ul>
           <div className="flex flex-col">{otherIngreds}</div>
+          <div className="flex flex-col">{bitters}</div>
         </div>
 
         <div className="flex justify-between">

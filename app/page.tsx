@@ -25,7 +25,6 @@ export default async function Page() {
     img: string;
   };
 
-  console.log(data);
   const drinks = data.map((drink: Cocktail) => {
     return (
       <Drink
@@ -38,7 +37,7 @@ export default async function Page() {
     );
   });
 
-  return <div className="p-10">{drinks}</div>;
+  return <div className="p-10 grid grid-cols-1 gap-2">{drinks}</div>;
 }
 
 // 			//  (1.75oz Batch)*
