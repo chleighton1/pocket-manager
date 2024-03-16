@@ -50,7 +50,7 @@ export default function Drink({
   let totalBatch = 0;
   let batchIngreds = [];
   let otherIngreds = [];
-  let bitters = [];
+  let bitters: any[] = [];
 
   if (recipe?.batch) {
     for (const quantity of Object.values(recipe.batch)) {
