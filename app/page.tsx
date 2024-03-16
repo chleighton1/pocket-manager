@@ -33,6 +33,7 @@ export default async function Page() {
         garnish={drink.garnish}
         glass={drink.glass}
         imagePath={drink.img}
+        key={drink.name}
       />
     );
   });
