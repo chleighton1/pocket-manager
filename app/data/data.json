@@ -97,5 +97,23 @@
     "garnish": "Dehydrated Lemon + Wine Float",
     "glass": "collins",
     "img": "/cocktails/Dawn in NY.jpeg"
+  },
+  {
+    "name": "Espresso Mocktini",
+    "recipe": {
+      "other": {
+        "Spiced Cane Spirit": 1.5,
+        "Lyre Coffee": 1,
+        "Cold Brew": 1,
+        "Vanilla Syrup": 0.5,
+        "Egg White": 0.5
+      },
+      "bitters": {
+        "saline": 4
+      }
+    },
+    "garnish": "None",
+    "glass": "coupe",
+    "img": "/cocktails/Espresso Mocktini.jpeg"
   }
 ]
