@@ -128,5 +128,18 @@
     "garnish": "Orange Peel",
     "glass": "rocks",
     "img": "/cocktails/Violet Hour.jpeg"
+  },
+  {
+    "name": "Violet Hour",
+    "recipe": {
+      "other": {
+        "Ube Coconut": 1,
+        "Lime": 1,
+        "Orange Juice": 0.25
+      }
+    },
+    "garnish": "Orange Peel",
+    "glass": "rocks",
+    "img": "/cocktails/Violet Hour.jpeg"
   }
 ]
